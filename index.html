@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nestan Bar &amp; Restaurante · Tapas, marisco y carne en Cullera</title>
+<meta name="description" content="Nestan Bar & Restaurante en Cullera: tapas, marisco, carne, pescado y bocadillos desde las 9 de la mañana. Reserva mesa por teléfono o WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nestan Bar & Restaurante · Cullera">
+<meta property="og:description" content="Tapas, marisco, carne y pescado en la Travessia Mestre Serrano, Cullera. Reserva mesa en un momento.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=1200&h=630&fit=crop">
+<meta name="theme-color" content="#0E2A3B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marine:#0E2A3B; --marine-2:#16394F; --salt:#EAF1EF; --coral:#C63A22; --ochre:#E8B04A; --ink:#0E2A3B;
+  --muted:#4A6070; --line:rgba(14,42,59,.18);
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --gut:16px; --max:1180px;
+  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--body);font-size:17px;line-height:1.55;color:var(--ink);background:var(--salt);padding-bottom:72px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ochre);color:var(--marine);padding:10px 14px;z-index:100}
+.skip:focus{left:8px}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,6.5vw,3.4rem);font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font:600 1rem var(--body);text-decoration:none;border:2px solid transparent;border-radius:4px;cursor:pointer;transition:transform .16s var(--ease-out),background-color .16s ease,color .16s ease}
+.btn:active{transform:scale(.97)}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-line{border-color:#fff;color:#fff;background:transparent}
+.btn-dark{background:var(--marine);color:#fff}
+@media (hover:hover) and (pointer:fine){
+  .btn-coral:hover{background:#a82f1a}
+  .btn-line:hover{background:#fff;color:var(--marine)}
+  .btn-dark:hover{background:var(--marine-2)}
+}
+
+/* header */
+header.top{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(14,42,59,.94);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.7rem;letter-spacing:-.03em;text-decoration:none;min-height:44px;display:flex;align-items:center}
+.logo i{display:inline-block;width:.38em;height:.38em;border-radius:50%;background:var(--ochre);margin-left:3px;transform:translateY(.12em)}
+.nav-right{display:flex;align-items:center;gap:8px}
+.lang{display:flex;border:1px solid rgba(255,255,255,.4);border-radius:4px}
+.lang button{min-width:44px;min-height:44px;background:none;border:0;color:#fff;font:600 .9rem var(--body);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ochre);color:var(--marine)}
+.menu-btn{min-width:44px;min-height:44px;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:4px;font:600 .9rem var(--body);padding:0 12px;cursor:pointer}
+nav.main{position:absolute;top:64px;left:0;right:0;background:var(--marine);padding:8px var(--gut) 20px;opacity:0;transform:translateY(-8px);pointer-events:none;visibility:hidden;transition:opacity .2s var(--ease-out),transform .2s var(--ease-out),visibility 0s .2s}
+nav.main.open{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .2s var(--ease-out),transform .2s var(--ease-out)}
+nav.main a{display:flex;align-items:center;min-height:48px;text-decoration:none;font-weight:600;border-bottom:1px solid rgba(255,255,255,.14)}
+.top .btn-coral.cta{display:none}
+
+/* hero */
+.hero{position:relative;min-height:100svh;color:#fff;display:flex;align-items:flex-end;background:var(--marine);overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,42,59,.55) 0%,rgba(14,42,59,.1) 35%,rgba(14,42,59,.92) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:40px;padding-top:110px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hero .name{font-size:clamp(4.6rem,24vw,12rem);font-weight:800;line-height:.82;letter-spacing:-.05em}
+.hero .sub{text-shadow:0 1px 10px rgba(14,42,59,.95);font-family:var(--display);font-size:.95rem;font-weight:500;margin:10px 0 18px;color:var(--ochre)}
+.hero .tag{font-family:var(--display);font-size:clamp(1.7rem,6vw,2.8rem);font-weight:500;max-width:18ch;letter-spacing:-.015em;line-height:1.08}
+.hero p.lead{max-width:44ch;margin:14px 0 24px;font-size:1.05rem}
+.hero .acts{display:flex;flex-wrap:wrap;gap:10px}
+.seal{position:absolute;z-index:3;right:var(--gut);top:84px;width:116px;height:116px;border-radius:50%;background:var(--ochre);color:var(--marine);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;font-weight:600;font-size:.72rem;line-height:1.15}
+.seal svg{width:60px;height:12px;margin-bottom:4px}
+.seal b{font-family:var(--display);font-size:.95rem;font-weight:800;line-height:1}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;margin-bottom:18px;background:rgba(14,42,59,.7);padding:6px 12px;border-radius:4px}
+.dot{width:10px;height:10px;border-radius:50%;background:#9aa7b0}
+.status.open .dot{background:#5fd08a}.status.closed .dot{background:#ff8a70}
+
+/* why */
+section{padding:64px 0}
+.why .grid{display:grid;gap:36px;margin-top:32px}
+.why .big blockquote{font-family:var(--display);font-weight:800;font-size:clamp(2rem,7vw,3.6rem);line-height:1.02;letter-spacing:-.02em}
+.why .big cite{display:block;margin-top:14px;font-style:normal;font-weight:600;color:var(--muted)}
+.why h3{font-size:1.5rem;font-weight:800}
+.why .price{font-family:var(--display);font-weight:800;font-size:clamp(3rem,12vw,5.5rem);line-height:.9;letter-spacing:-.04em;color:var(--coral)}
+.why .side p{max-width:36ch;margin-top:8px}
+.why .small{border-top:2px solid var(--marine);padding-top:12px;max-width:36ch}
+@media(min-width:860px){
+  .why .grid{grid-template-columns:1.5fr 1fr;gap:56px 64px;align-items:start}
+  .why .big{grid-row:span 2}
+}
+
+/* carta */
+.carta{background:var(--marine);color:#fff}
+.carta .intro{max-width:52ch;color:#cfdce3;margin:12px 0 28px}
+.carta ul{list-style:none;padding:0;max-width:880px}
+.carta li{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:16px 0;border-bottom:1px dashed rgba(255,255,255,.3)}
+.carta li h3{font-size:1.35rem;font-weight:800;letter-spacing:-.01em}
+.carta li p{grid-column:1;color:#cfdce3;font-size:.98rem}
+.carta .pr{grid-row:1;grid-column:2;color:var(--ochre);font-weight:600;font-size:.95rem;align-self:center}
+.carta .note{margin-top:20px;color:#cfdce3;font-size:.95rem}
+.carta .btn{margin-top:20px}
+
+/* galeria */
+.gal .g{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:28px}
+.gal figure{background:var(--marine);overflow:hidden;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal .a{aspect-ratio:4/3;grid-column:span 2}
+.gal .b{aspect-ratio:1}
+.gal .c{aspect-ratio:1}
+.gal .d{aspect-ratio:1}
+.gal .e{aspect-ratio:16/9;grid-column:span 2;order:1}
+.gal .f{aspect-ratio:1}
+.gal .cap{margin-top:12px;color:var(--muted);font-size:.9rem}
+@media(min-width:860px){
+  .gal .g{grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:10px}
+  .gal figure{aspect-ratio:auto!important}
+  .gal .a{grid-column:1/4;grid-row:span 2}.gal .b{grid-column:4/5;grid-row:span 2}.gal .c{grid-column:5/7;grid-row:span 3}.gal .e{order:0}
+  .gal .d{grid-column:1/3;grid-row:span 2}.gal .e{grid-column:3/5;grid-row:span 2}.gal .f{grid-column:5/7;grid-row:span 1}
+}
+
+/* reseñas + horario */
+.rev{background:#dbe7e4}
+.rev .cols{display:grid;gap:40px;margin-top:28px}
+.rev blockquote{font-family:var(--display);font-size:clamp(1.6rem,5vw,2.4rem);font-weight:500;line-height:1.12;letter-spacing:-.015em}
+.stars{display:flex;gap:3px;margin-bottom:14px}
+.stars svg{width:20px;height:20px;fill:var(--coral)}
+.rev cite{display:block;margin-top:12px;font-style:normal;font-weight:600;color:var(--muted)}
+.hours h3{font-size:1.5rem;font-weight:800;margin-bottom:6px}
+.hours table{border-collapse:collapse;width:100%;max-width:460px}
+.hours th,.hours td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);font-weight:400}
+.hours th{font-weight:600}
+.hours tr.today{background:var(--marine);color:#fff}
+.hours tr.today th,.hours tr.today td{font-weight:600}
+.hours small{display:block;margin-top:10px;color:var(--muted)}
+@media(min-width:860px){.rev .cols{grid-template-columns:1.3fr 1fr;gap:72px}}
+
+/* contacto */
+.contact .cols{display:grid;gap:32px;margin-top:28px}
+.contact address{font-style:normal;font-size:1.2rem}
+.contact .tel{display:inline-block;font-family:var(--display);font-weight:800;font-size:2rem;letter-spacing:-.02em;text-decoration:none;margin:10px 0;min-height:44px}
+.contact .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.map{width:100%;height:340px;border:0;background:#c9d8d4}
+@media(min-width:860px){.contact .cols{grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}.map{height:420px}}
+
+footer{background:var(--marine);color:#cfdce3;padding:32px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer a{display:inline-flex;align-items:center;min-height:44px}
+
+/* barra móvil */
+.fixbar{position:fixed;inset:auto 0 0 0;z-index:60;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:8px var(--gut);background:var(--marine);box-shadow:0 -1px 0 rgba(255,255,255,.15)}
+.fixbar .btn{min-height:48px}
+@media(min-width:860px){
+  .fixbar{display:none}body{padding-bottom:0}
+  .menu-btn{display:none}
+  .nav-right{order:3}nav.main{order:2;position:static;opacity:1;transform:none;pointer-events:auto;visibility:visible;background:none;padding:0;display:flex;gap:4px}
+  nav.main a{border:0;padding:0 12px}
+  .top .btn-coral.cta{display:inline-flex}
+  .bar{height:72px}
+  .hero .wrap{padding-bottom:64px}
+  .seal{top:100px;width:150px;height:150px;font-size:.82rem}.seal b{font-size:1.15rem}
+  section{padding:96px 0}
+}
+@media(max-width:380px){.logo{font-size:1.4rem}.lang button{min-width:40px}}
+
+/* movimiento: solo transform y opacity */
+.hero .rise{opacity:0;transform:translateY(14px);animation:rise .5s var(--ease-out) forwards}
+.hero .rise:nth-child(2){animation-delay:60ms}.hero .rise:nth-child(3){animation-delay:120ms}.hero .rise:nth-child(4){animation-delay:180ms}.hero .rise:nth-child(5){animation-delay:240ms}
+@keyframes rise{to{opacity:1;transform:none}}
+.js .rv{opacity:0;transform:translateY(10px);transition:opacity .24s var(--ease-out),transform .24s var(--ease-out);transition-delay:calc(var(--i,0)*45ms)}
+.js .rv.in{opacity:1;transform:none}
+@media (hover:hover) and (pointer:fine){
+  .gal figure img{transition:transform .3s var(--ease-out)}
+  .gal figure:hover img{transform:scale(1.03)}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero .rise{animation:fadein .2s ease forwards;transform:none}
+  @keyframes fadein{to{opacity:1}}
+  .js .rv{transform:none;transition:opacity .2s ease}
+  nav.main,nav.main.open{transform:none}
+  .btn:active{transform:none}
+  .gal figure:hover img{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#carta" data-va="Vés al contingut">Ir al contenido</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="st" viewBox="0 0 20 20"><path d="M10 1.5l2.5 5.6 6 .6-4.5 4 1.3 6L10 14.6 4.7 17.7l1.3-6-4.5-4 6-.6z"/></symbol></svg>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#inicio" aria-label="Nestan Bar &amp; Restaurante, inicio">nestan<i></i></a>
+    <div class="nav-right">
+      <a class="btn btn-coral cta" id="cta-top" href="#" data-va="Reserva mesa">Reserva mesa</a>
+      <div class="lang" role="group" aria-label="Idioma / Idioma">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="va" aria-pressed="false">VA</button>
+      </div>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" data-va="Menú">Menú</button>
+    </div>
+    <nav class="main" id="nav" aria-label="Principal">
+      <a href="#por-que" data-va="Per què venir">Por qué venir</a>
+      <a href="#carta" data-va="Carta">Carta</a>
+      <a href="#galeria" data-va="Galeria">Galería</a>
+      <a href="#horario" data-va="Horari">Horario</a>
+      <a href="#contacto" data-va="Contacte">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" style="padding:0">
+  <img class="bg" src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=1600&h=1000&fit=crop" width="1600" height="1000" alt="Paella de marisco en sartén sobre mesa oscura" data-va-alt="Paella de marisc en paella sobre taula fosca" onerror="this.style.visibility='hidden'">
+  <div class="seal">
+    <svg viewBox="0 0 100 20" fill="currentColor" aria-hidden="true"><use href="#st" x="0" width="20" height="20"/><use href="#st" x="20" width="20" height="20"/><use href="#st" x="40" width="20" height="20"/><use href="#st" x="60" width="20" height="20"/><use href="#st" x="80" width="20" height="20"/></svg>
+    <b class="edit" data-va="Molt ben valorat">Muy bien valorado</b>
+    <span class="edit" data-va="+160 opinions a Google">+160 opiniones en Google</span>
+  </div>
+  <div class="wrap">
+    <div class="status rise" id="status" role="status"><span class="dot"></span><span id="status-txt">Horario orientativo</span></div>
+    <h1 class="name rise">Nestan<span class="sr"> Bar &amp; Restaurante</span></h1>
+    <p class="sub rise">Bar &amp; Restaurante · Cullera</p>
+    <p class="tag rise" data-va="Menja bé a Cullera, de les tapes al peix.">Come bien en Cullera, de las tapas al pescado.</p>
+    <p class="lead rise" data-va="Tapes, marisc, carn i entrepans. Des de les 9 del matí, a la Travessia Mestre Serrano.">Tapas, marisco, carne y bocadillos. Desde las 9 de la mañana, en la Travessia Mestre Serrano.</p>
+    <div class="acts rise">
+      <a class="btn btn-coral" id="cta-hero" href="#" data-va="Reserva mesa">Reserva mesa</a>
+      <a class="btn btn-line" href="tel:+34631203169" data-va="Telefona'ns">Llámanos</a>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="por-que">
+  <div class="wrap">
+    <h2 data-va="Per què seure a Nestan">Por qué sentarse en Nestan</h2>
+    <div class="grid">
+      <div class="big">
+        <blockquote lang="es">«Tanto la comida como el servicio fueron de 10.»</blockquote>
+        <cite data-va="Ressenya de Google. Els clients destaquen l'atenció de l'equip.">Reseña de Google. Los clientes destacan la atención del equipo.</cite>
+      </div>
+      <div class="side">
+        <p class="price edit">10–20 €</p>
+        <h3 data-va="per persona, aproximadament">por persona, aproximadamente</h3>
+        <p data-va="Tapes per a picar o plat complet: tu decidixes quant gastar.">Tapas para picar o plato completo: tú decides cuánto gastar.</p>
+      </div>
+      <div class="small">
+        <h3 data-va="Obert des de les 9">Abierto desde las 9</h3>
+        <p data-va="Esmorzar, dinar i sopar en el mateix lloc. Local accessible per a cadires de rodes.">Desayuno, comida y cena en el mismo sitio. Local accesible para sillas de ruedas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carta" id="carta">
+  <div class="wrap">
+    <h2 data-va="La carta">La carta</h2>
+    <p class="intro" data-va="Plats que la gent demana i recomana en les ressenyes. Pregunta pels preus i pel plat del dia.">Platos que la gente pide y recomienda en las reseñas. Pregunta por los precios y por el plato del día.</p>
+    <ul>
+      <li class="rv"><h3 data-va="Gambes a l'all">Gambas al ajillo</h3><span class="pr" data-va="Consulta al local">Consultar en local</span><p data-va="Saltades amb all, per a compartir.">Salteadas con ajo, para compartir.</p></li>
+      <li class="rv"><h3 data-va="Creïlles amb formatge i cansalada">Patatas con queso y bacon</h3><span class="pr" data-va="Consulta al local">Consultar en local</span><p data-va="Calentes, per a picar.">Calientes, para picar.</p></li>
+      <li class="rv"><h3 data-va="Calamars">Calamares</h3><span class="pr" data-va="Consulta al local">Consultar en local</span><p class="edit" data-va="Un clàssic de barra.">Un clásico de barra.</p></li>
+      <li class="rv"><h3 data-va="Paella">Paella</h3><span class="pr" data-va="Consulta al local">Consultar en local</span><p class="edit" data-va="Pregunta per l'arròs del dia.">Pregunta por el arroz del día.</p></li>
+      <li class="rv"><h3 data-va="Peix">Pescado</h3><span class="pr" data-va="Consulta al local">Consultar en local</span><p class="edit" data-va="Pregunta què hi ha hui.">Pregunta qué hay hoy.</p></li>
+      <li class="rv"><h3 data-va="Marisc">Marisco</h3><span class="pr" data-va="Consulta al local">Consultar en local</span><p class="edit" data-va="Pregunta què hi ha hui.">Pregunta qué hay hoy.</p></li>
+      <li class="rv"><h3 data-va="Carn">Carne</h3><span class="pr" data-va="Consulta al local">Consultar en local</span><p class="edit" data-va="Pregunta pels talls del dia.">Pregunta por los cortes del día.</p></li>
+      <li class="rv"><h3 data-va="Entrepans">Bocadillos</h3><span class="pr" data-va="Consulta al local">Consultar en local</span><p class="edit" data-va="Per a l'esmorzar o el dinar.">Para el desayuno o la comida.</p></li>
+    </ul>
+    <p class="note" data-va="Carta orientativa. Confirma plats i preus per telèfon.">Carta orientativa. Confirma platos y precios por teléfono.</p>
+    <a class="btn btn-coral" id="cta-carta" href="#" data-va="Reserva mesa">Reserva mesa</a>
+  </div>
+</section>
+
+<section class="gal" id="galeria">
+  <div class="wrap">
+    <h2 data-va="Taula, plats i ambient">Mesa, platos y ambiente</h2>
+    <div class="g">
+      <figure class="a rv"><img loading="lazy" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&h=675&fit=crop" width="900" height="675" alt="Comedor amplio con mesas de madera y lámparas colgantes" data-va-alt="Menjador ampli amb taules de fusta i làmpades penjades" onerror="this.style.visibility='hidden'"></figure>
+      <figure class="b rv"><img loading="lazy" src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=600&h=600&fit=crop" width="600" height="600" alt="Marisco con limón en una cazuela" data-va-alt="Marisc amb llima en una cassola" onerror="this.style.visibility='hidden'"></figure>
+      <figure class="c rv"><img loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=800&fit=crop" width="600" height="800" alt="Costillas de carne con patatas sobre tabla de madera" data-va-alt="Costelles de carn amb creïlles sobre una taula de fusta" onerror="this.style.visibility='hidden'"></figure>
+      <figure class="d rv"><img loading="lazy" src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&h=600&fit=crop" width="600" height="600" alt="Pescado a la plancha con verduras" data-va-alt="Peix a la planxa amb verdures" onerror="this.style.visibility='hidden'"></figure>
+      <figure class="e rv"><img loading="lazy" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=960&h=540&fit=crop" width="960" height="540" alt="Filete de carne con patatas fritas" data-va-alt="Bistec de carn amb creïlles fregides" onerror="this.style.visibility='hidden'"></figure>
+      <figure class="f rv"><img loading="lazy" src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=600&h=600&fit=crop" width="600" height="600" alt="Albóndigas sobre rúcula" data-va-alt="Mandonguilles sobre ruca" onerror="this.style.visibility='hidden'"></figure>
+    </div>
+    <p class="cap edit" data-va="Fotos provisionals. A la web definitiva hi aniran les vostres.">Fotos provisionales. En la web definitiva irían las vuestras.</p>
+  </div>
+</section>
+
+<section class="rev" id="horario">
+  <div class="wrap">
+    <h2 data-va="Què diuen i quan obrim">Qué dicen y cuándo abrimos</h2>
+    <div class="cols">
+      <figure>
+        <div class="stars" role="img" aria-label="5 estrellas" data-va-aria="5 estreles"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></div>
+        <blockquote lang="es">«Nos dejaron cargar los móviles y tanto la comida como el servicio fueron de 10.»</blockquote>
+        <cite data-va="Ressenya de Google">Reseña de Google</cite>
+      </figure>
+      <div class="hours">
+        <h3 data-va="Horari">Horario</h3>
+        <table>
+          <caption class="sr" data-va="Horari">Horario</caption>
+          <tbody class="edit">
+            <tr data-d="1"><th scope="row" data-va="Dilluns">Lunes</th><td>9:00–16:00 · 19:30–00:00</td></tr>
+            <tr data-d="2"><th scope="row" data-va="Dimarts">Martes</th><td>9:00–16:00 · 19:30–00:00</td></tr>
+            <tr data-d="3"><th scope="row" data-va="Dimecres">Miércoles</th><td data-va="Tancat">Cerrado</td></tr>
+            <tr data-d="4"><th scope="row" data-va="Dijous">Jueves</th><td>9:00–16:00 · 19:30–00:00</td></tr>
+            <tr data-d="5"><th scope="row" data-va="Divendres">Viernes</th><td>9:00–16:00 · 19:30–00:00</td></tr>
+            <tr data-d="6"><th scope="row" data-va="Dissabte">Sábado</th><td>9:00–16:00 · 19:30–00:00</td></tr>
+            <tr data-d="0"><th scope="row" data-va="Diumenge">Domingo</th><td>9:00–16:00 · 19:30–01:00</td></tr>
+          </tbody>
+        </table>
+        <small data-va="Horari orientatiu. Telefona abans de vindre.">Horario orientativo. Llama antes de venir.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <h2 data-va="Vine a Nestan">Ven a Nestan</h2>
+    <div class="cols">
+      <div>
+        <address>Travessia Mestre Serrano, 2<br>Cullera, València</address>
+        <a class="tel" href="tel:+34631203169">631 20 31 69</a>
+        <p data-va="Reserva per telèfon o per WhatsApp, com et vinga millor.">Reserva por teléfono o por WhatsApp, como te venga mejor.</p>
+        <div class="acts">
+          <a class="btn btn-coral" id="cta-wa" href="#" data-va="Escriu-nos per WhatsApp">Escríbenos por WhatsApp</a>
+          <a class="btn btn-dark" href="tel:+34631203169" data-va="Telefona'ns">Llámanos</a>
+        </div>
+      </div>
+      <iframe class="map" title="Mapa de Nestan Bar & Restaurante en Cullera" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Travessia+Mestre+Serrano+2+Cullera&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Nestan Bar &amp; Restaurante · Cullera</span>
+    <a href="https://porfolio-pepe.vercel.app" data-va="Maqueta de disseny de Pepe Llopis">Maqueta de diseño de Pepe Llopis</a>
+  </div>
+</footer>
+
+<div class="fixbar">
+  <a class="btn btn-line" href="tel:+34631203169" data-va="Telefona">Llamar</a>
+  <a class="btn btn-coral" id="cta-bar" href="#" data-va="Reserva mesa">Reserva mesa</a>
+</div>
+
+<script>
+(function(){
+  var d=document,root=d.documentElement;
+  root.classList.add('js');
+  var PHONE='34631203169';
+  var T={es:{msg:'Hola, quiero reservar mesa en Nestan.',open:'Abierto ahora · hasta las ',openAt:'Cerrado · abrimos a las ',tomorrow:'Cerrado hoy · abrimos mañana a las ',closed:'Cerrado hoy · abrimos el jueves a las ',later:'Cerrado · abrimos a las ',menu:'Menú',close:'Cerrar'},
+         va:{msg:'Hola, vull reservar taula a Nestan.',open:'Obert ara · fins a les ',openAt:'Tancat · obrim a les ',tomorrow:'Tancat hui · obrim demà a les ',closed:'Tancat hui · obrim dijous a les ',later:'Tancat · obrim a les ',menu:'Menú',close:'Tanca'}};
+  var lang='es';
+  try{var s=localStorage.getItem('nestan-lang');if(s==='va'||s==='es')lang=s;}catch(e){}
+
+  // horario [[ini,fin],...] en minutos; domingo cierra a las 25:00 (01:00)
+  var H={0:[[540,960],[1170,1500]],1:[[540,960],[1170,1440]],2:[[540,960],[1170,1440]],3:[],4:[[540,960],[1170,1440]],5:[[540,960],[1170,1440]],6:[[540,960],[1170,1440]]};
+  function fmt(m){m=m%1440;var h=Math.floor(m/60),mm=m%60;return h+':'+(mm<10?'0':'')+mm;}
+  function madrid(){
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()),o={};
+    p.forEach(function(x){o[x.type]=x.value;});
+    var w={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+    return {day:w,min:parseInt(o.hour,10)*60+parseInt(o.minute,10)};
+  }
+  function status(){
+    var n=madrid(),t=T[lang],el=d.getElementById('status'),txt=d.getElementById('status-txt');
+    var prev=(n.day+6)%7,state='closed',msg='';
+    var ov=H[prev].filter(function(r){return r[1]>1440;})[0];
+    if(ov&&n.min<ov[1]-1440){state='open';msg=t.open+fmt(ov[1]);}
+    if(!msg){
+      var r=H[n.day];
+      for(var i=0;i<r.length;i++){
+        if(n.min>=r[i][0]&&n.min<r[i][1]){state='open';msg=t.open+fmt(r[i][1]);break;}
+        if(n.min<r[i][0]){msg=t.later+fmt(r[i][0]);break;}
+      }
+      if(!msg){
+        var nd=(n.day+1)%7;
+        msg=H[nd].length?t.tomorrow+fmt(H[nd][0][0]):t.closed+'9:00';
+      }
+    }
+    el.className='status rise '+state;txt.textContent=msg;
+    d.querySelectorAll('.hours tr').forEach(function(tr){tr.classList.toggle('today',+tr.dataset.d===n.day);});
+  }
+  function links(){
+    var wa='https://wa.me/'+PHONE+'?text='+encodeURIComponent(T[lang].msg);
+    ['cta-top','cta-hero','cta-carta','cta-bar','cta-wa'].forEach(function(id){var a=d.getElementById(id);if(a){a.href=wa;a.target='_blank';a.rel='noopener';}});
+  }
+  function setLang(l,save){
+    lang=l;
+    d.querySelectorAll('[data-va]').forEach(function(e){
+      if(e.dataset.es===undefined)e.dataset.es=e.innerHTML;
+      e.innerHTML=l==='va'?e.dataset.va:e.dataset.es;
+    });
+    d.querySelectorAll('[data-va-alt]').forEach(function(e){
+      if(e.dataset.esAlt===undefined)e.dataset.esAlt=e.alt;
+      e.alt=l==='va'?e.dataset.vaAlt:e.dataset.esAlt;
+    });
+    d.querySelectorAll('[data-va-aria]').forEach(function(e){
+      if(e.dataset.esAria===undefined)e.dataset.esAria=e.getAttribute('aria-label');
+      e.setAttribute('aria-label',l==='va'?e.dataset.vaAria:e.dataset.esAria);
+    });
+    root.lang=l==='va'?'ca-ES-valencia':'es';
+    d.querySelectorAll('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===l);});
+    d.querySelector('.menu-btn').textContent=T[l].menu;
+    if(save){try{localStorage.setItem('nestan-lang',l);}catch(e){}}
+    status();links();
+  }
+  d.querySelectorAll('[data-lang]').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang,true);});});
+  setLang(lang,false);
+  setInterval(status,60000);
+
+  var mb=d.querySelector('.menu-btn'),nav=d.getElementById('nav');
+  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded',false);}});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');mb.setAttribute('aria-expanded',false);mb.focus();}});
+
+  var items=d.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.15});
+    items.forEach(function(e,i){e.style.setProperty('--i',i%4);io.observe(e);});
+  }else items.forEach(function(e){e.classList.add('in');});
+})();
+</script>
+</body>
+</html>

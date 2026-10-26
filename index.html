@@ -9,169 +9,192 @@
 <meta property="og:title" content="Nestan Bar & Restaurante · Cullera">
 <meta property="og:description" content="Tapas, marisco, carne y pescado en la Travessia Mestre Serrano, Cullera. Reserva mesa en un momento.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=1200&h=630&fit=crop">
-<meta name="theme-color" content="#0E2A3B">
+<meta name="theme-color" content="#222220">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --marine:#0E2A3B; --marine-2:#16394F; --salt:#EAF1EF; --coral:#C63A22; --ochre:#E8B04A; --ink:#0E2A3B;
-  --muted:#4A6070; --line:rgba(14,42,59,.18);
+  --coal:#222220; --coal-2:#2E2D2A; --gold:#B9A26B; --gold-d:#9C8651; --white:#fff;
+  --linen:#F3EEE3; --stone:#E6DECE; --sage:#4C5841; --muted:#5A564B;
   --ease-out:cubic-bezier(0.23,1,0.32,1);
-  --gut:16px; --max:1180px;
-  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Figtree',system-ui,sans-serif;
+  --gut:16px; --max:1160px;
+  --serif:'Gloock',Georgia,serif; --sans:'Hanken Grotesk',system-ui,sans-serif;
+  --grain-d:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .13 0 0 0 0 .13 0 0 0 0 .12 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+  --grain-l:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .97 0 0 0 0 .9 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.06'/%3E%3C/svg%3E");
 }
 *{box-sizing:border-box;margin:0}
 html{-webkit-text-size-adjust:100%}
-body{font-family:var(--body);font-size:17px;line-height:1.55;color:var(--ink);background:var(--salt);padding-bottom:72px;overflow-x:hidden}
+body{font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--coal);background:var(--grain-d),var(--linen);padding-bottom:72px;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ochre);color:var(--marine);padding:10px 14px;z-index:100}
+:focus-visible{outline:3px solid var(--gold-d);outline-offset:3px}
+.dark :focus-visible,header :focus-visible,.hero :focus-visible,.fixbar :focus-visible,footer :focus-visible{outline-color:var(--gold)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--coal);padding:10px 14px;z-index:100}
 .skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
-h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-.02em}
-h2{font-size:clamp(2rem,6.5vw,3.4rem);font-weight:800}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font:600 1rem var(--body);text-decoration:none;border:2px solid transparent;border-radius:4px;cursor:pointer;transition:transform .16s var(--ease-out),background-color .16s ease,color .16s ease}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spacing:-.005em}
+h2{font-size:clamp(2.1rem,7vw,3.5rem)}
+.olive{display:block;width:120px;height:26px;margin:14px 0 4px;color:var(--gold-d);fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.dark .olive,footer .olive{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;font:600 1rem var(--sans);text-decoration:none;border:2px solid transparent;border-radius:22px 6px 22px 6px;cursor:pointer;transition:transform .16s var(--ease-out),background-color .16s ease,color .16s ease}
 .btn:active{transform:scale(.97)}
-.btn-coral{background:var(--coral);color:#fff}
-.btn-line{border-color:#fff;color:#fff;background:transparent}
-.btn-dark{background:var(--marine);color:#fff}
+.btn-gold{background:var(--gold);color:var(--coal)}
+.btn-coal{background:var(--coal);color:var(--linen)}
+.btn-line{border-color:var(--linen);color:var(--linen);background:transparent}
 @media (hover:hover) and (pointer:fine){
-  .btn-coral:hover{background:#a82f1a}
-  .btn-line:hover{background:#fff;color:var(--marine)}
-  .btn-dark:hover{background:var(--marine-2)}
+  .btn-gold:hover{background:#cdb77f}
+  .btn-coal:hover{background:var(--sage)}
+  .btn-line:hover{background:var(--linen);color:var(--coal)}
 }
 
-/* header */
-header.top{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(14,42,59,.94);color:#fff}
+/* logotipo */
+.wm{font-family:var(--serif);line-height:.9;letter-spacing:-.02em;white-space:nowrap}
+.wm .mir{display:inline-block;transform:scaleX(-1)}
+.crown{display:block;width:clamp(120px,32vw,190px);height:auto;fill:var(--gold)}
+.crown .dot{fill:#fff}
+
+/* cabecera */
+header.top{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(34,34,32,.95);color:var(--linen)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--display);font-weight:800;font-size:1.7rem;letter-spacing:-.03em;text-decoration:none;min-height:44px;display:flex;align-items:center}
-.logo i{display:inline-block;width:.38em;height:.38em;border-radius:50%;background:var(--ochre);margin-left:3px;transform:translateY(.12em)}
+.logo{text-decoration:none;min-height:44px;display:flex;align-items:center;color:#fff}
+.logo .wm{font-size:1.9rem}
 .nav-right{display:flex;align-items:center;gap:8px}
-.lang{display:flex;border:1px solid rgba(255,255,255,.4);border-radius:4px}
-.lang button{min-width:44px;min-height:44px;background:none;border:0;color:#fff;font:600 .9rem var(--body);cursor:pointer}
-.lang button[aria-pressed=true]{background:var(--ochre);color:var(--marine)}
-.menu-btn{min-width:44px;min-height:44px;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:4px;font:600 .9rem var(--body);padding:0 12px;cursor:pointer}
-nav.main{position:absolute;top:64px;left:0;right:0;background:var(--marine);padding:8px var(--gut) 20px;opacity:0;transform:translateY(-8px);pointer-events:none;visibility:hidden;transition:opacity .2s var(--ease-out),transform .2s var(--ease-out),visibility 0s .2s}
+.lang{display:flex;border:1px solid rgba(243,238,227,.45);border-radius:14px 4px 14px 4px;overflow:hidden}
+.lang button{min-width:44px;min-height:44px;background:none;border:0;color:var(--linen);font:600 .9rem var(--sans);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--gold);color:var(--coal)}
+.menu-btn{min-width:44px;min-height:44px;background:none;border:1px solid rgba(243,238,227,.45);color:var(--linen);border-radius:14px 4px 14px 4px;font:600 .9rem var(--sans);padding:0 12px;cursor:pointer}
+nav.main{position:absolute;top:64px;left:0;right:0;background:var(--coal);padding:8px var(--gut) 20px;opacity:0;transform:translateY(-8px);pointer-events:none;visibility:hidden;transition:opacity .2s var(--ease-out),transform .2s var(--ease-out),visibility 0s .2s}
 nav.main.open{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .2s var(--ease-out),transform .2s var(--ease-out)}
-nav.main a{display:flex;align-items:center;min-height:48px;text-decoration:none;font-weight:600;border-bottom:1px solid rgba(255,255,255,.14)}
-.top .btn-coral.cta{display:none}
+nav.main a{display:flex;align-items:center;min-height:48px;text-decoration:none;font-weight:600;border-bottom:1px solid rgba(243,238,227,.15)}
+.top .btn.cta{display:none}
+
+/* secciones y curvas */
+section{position:relative;padding:72px 0}
+.wave{position:absolute;left:0;top:-39px;width:100%;height:40px;display:block;pointer-events:none}
+.dark{background:var(--grain-l),var(--coal);color:var(--linen)}
+.dark .wave{fill:var(--coal)}
+.cream{background:var(--grain-d),var(--linen)}.cream .wave{fill:var(--linen)}
+.stone{background:var(--grain-d),var(--stone)}.stone .wave{fill:var(--stone)}
 
 /* hero */
-.hero{position:relative;min-height:100svh;color:#fff;display:flex;align-items:flex-end;background:var(--marine);overflow:hidden}
-.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,42,59,.55) 0%,rgba(14,42,59,.1) 35%,rgba(14,42,59,.92) 100%)}
-.hero .wrap{position:relative;z-index:2;padding-bottom:40px;padding-top:110px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.hero .name{font-size:clamp(4.6rem,24vw,12rem);font-weight:800;line-height:.82;letter-spacing:-.05em}
-.hero .sub{text-shadow:0 1px 10px rgba(14,42,59,.95);font-family:var(--display);font-size:.95rem;font-weight:500;margin:10px 0 18px;color:var(--ochre)}
-.hero .tag{font-family:var(--display);font-size:clamp(1.7rem,6vw,2.8rem);font-weight:500;max-width:18ch;letter-spacing:-.015em;line-height:1.08}
+.hero{position:relative;min-height:100svh;color:#fff;display:flex;align-items:flex-end;background:var(--coal);overflow:hidden;padding:0 0 40px}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:sepia(.22) saturate(.95)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(34,34,32,.62) 0%,rgba(34,34,32,.5) 38%,rgba(34,34,32,.95) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:110px}
+.lockup{display:flex;width:fit-content;flex-direction:column;align-items:flex-start;gap:6px;margin-bottom:6px;font-weight:400}
+.lockup .wm{font-size:clamp(4.4rem,23vw,10rem);color:#fff}
+.lockup .rest{align-self:stretch;display:flex;justify-content:space-between;font:600 clamp(.8rem,3.4vw,1.4rem)/1 var(--sans);color:var(--gold);text-shadow:0 1px 8px rgba(34,34,32,.9)}
+.hero .sub{font-size:1rem;margin:14px 0 16px;color:var(--gold);font-weight:600;text-shadow:0 1px 10px rgba(34,34,32,.95)}
+.hero .tag{font-family:var(--serif);font-size:clamp(1.6rem,5.5vw,2.6rem);max-width:19ch;line-height:1.1}
 .hero p.lead{max-width:44ch;margin:14px 0 24px;font-size:1.05rem}
 .hero .acts{display:flex;flex-wrap:wrap;gap:10px}
-.seal{position:absolute;z-index:3;right:var(--gut);top:84px;width:116px;height:116px;border-radius:50%;background:var(--ochre);color:var(--marine);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;font-weight:600;font-size:.72rem;line-height:1.15}
-.seal svg{width:60px;height:12px;margin-bottom:4px}
-.seal b{font-family:var(--display);font-size:.95rem;font-weight:800;line-height:1}
-.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;margin-bottom:18px;background:rgba(14,42,59,.7);padding:6px 12px;border-radius:4px}
+.seal{position:absolute;z-index:3;right:var(--gut);top:84px;width:118px;height:118px;border-radius:50%;background:var(--coal);border:2px solid var(--gold);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;font-weight:600;font-size:.72rem;line-height:1.15}
+.seal svg{width:60px;height:12px;margin-bottom:4px;color:var(--gold)}
+.seal b{font-family:var(--serif);font-weight:400;font-size:1rem;line-height:1;color:var(--gold)}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;margin-bottom:18px;background:rgba(34,34,32,.75);padding:6px 14px;border-radius:14px 4px 14px 4px}
 .dot{width:10px;height:10px;border-radius:50%;background:#9aa7b0}
-.status.open .dot{background:#5fd08a}.status.closed .dot{background:#ff8a70}
+.status.open .dot{background:#8fc48a}.status.closed .dot{background:var(--gold)}
 
-/* why */
-section{padding:64px 0}
+/* por qué */
 .why .grid{display:grid;gap:36px;margin-top:32px}
-.why .big blockquote{font-family:var(--display);font-weight:800;font-size:clamp(2rem,7vw,3.6rem);line-height:1.02;letter-spacing:-.02em}
-.why .big cite{display:block;margin-top:14px;font-style:normal;font-weight:600;color:var(--muted)}
-.why h3{font-size:1.5rem;font-weight:800}
-.why .price{font-family:var(--display);font-weight:800;font-size:clamp(3rem,12vw,5.5rem);line-height:.9;letter-spacing:-.04em;color:var(--coral)}
+.why .big blockquote{font-family:var(--serif);font-size:clamp(2.1rem,7.5vw,3.8rem);line-height:1.04}
+.why .big cite{display:block;margin-top:16px;font-style:normal;font-weight:600;color:var(--muted)}
+.why h3{font-size:1.5rem}
+.why .price{font-family:var(--serif);font-size:clamp(3.2rem,13vw,5.6rem);line-height:.95;color:var(--sage)}
 .why .side p{max-width:36ch;margin-top:8px}
-.why .small{border-top:2px solid var(--marine);padding-top:12px;max-width:36ch}
+.why .small{max-width:36ch;padding:20px 22px;background:var(--stone);border-radius:48px 8px 48px 8px}
 @media(min-width:860px){
-  .why .grid{grid-template-columns:1.5fr 1fr;gap:56px 64px;align-items:start}
+  .why .grid{grid-template-columns:1.5fr 1fr;gap:48px 72px;align-items:start}
   .why .big{grid-row:span 2}
 }
 
 /* carta */
-.carta{background:var(--marine);color:#fff}
-.carta .intro{max-width:52ch;color:#cfdce3;margin:12px 0 28px}
+.carta .intro{max-width:52ch;color:#d9d3c4;margin:8px 0 28px}
 .carta ul{list-style:none;padding:0;max-width:880px}
-.carta li{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:16px 0;border-bottom:1px dashed rgba(255,255,255,.3)}
-.carta li h3{font-size:1.35rem;font-weight:800;letter-spacing:-.01em}
-.carta li p{grid-column:1;color:#cfdce3;font-size:.98rem}
-.carta .pr{grid-row:1;grid-column:2;color:var(--ochre);font-weight:600;font-size:.95rem;align-self:center}
-.carta .note{margin-top:20px;color:#cfdce3;font-size:.95rem}
+.carta li{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:16px 0;border-bottom:1px dashed rgba(185,162,107,.55)}
+.carta li h3{font-size:1.45rem}
+.carta li p{grid-column:1;color:#d9d3c4;font-size:.98rem}
+.carta .pr{grid-row:1;grid-column:2;color:var(--gold);font-weight:600;font-size:.95rem;align-self:center}
+.carta .note{margin-top:20px;color:#d9d3c4;font-size:.95rem}
 .carta .btn{margin-top:20px}
 
-/* galeria */
-.gal .g{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:28px}
-.gal figure{background:var(--marine);overflow:hidden;position:relative}
-.gal img{width:100%;height:100%;object-fit:cover}
-.gal .a{aspect-ratio:4/3;grid-column:span 2}
-.gal .b{aspect-ratio:1}
-.gal .c{aspect-ratio:1}
-.gal .d{aspect-ratio:1}
-.gal .e{aspect-ratio:16/9;grid-column:span 2;order:1}
-.gal .f{aspect-ratio:1}
-.gal .cap{margin-top:12px;color:var(--muted);font-size:.9rem}
+/* galería */
+.gal .g{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:24px}
+.gal figure{background:var(--stone);overflow:hidden;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;filter:sepia(.2) saturate(.95) contrast(1.02)}
+.gal .a{aspect-ratio:4/3;grid-column:span 2;border-radius:110px 10px 110px 10px}
+.gal .b{aspect-ratio:1;border-radius:10px 70px 10px 70px}
+.gal .c{aspect-ratio:1;border-radius:70px 10px 70px 10px}
+.gal .d{aspect-ratio:1;border-radius:10px 70px 10px 70px}
+.gal .e{aspect-ratio:16/9;grid-column:span 2;order:1;border-radius:10px 110px 10px 110px}
+.gal .f{aspect-ratio:1;border-radius:70px 10px 70px 10px}
+.gal .cap{margin-top:14px;color:var(--muted);font-size:.9rem}
 @media(min-width:860px){
-  .gal .g{grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:10px}
+  .gal .g{grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:12px}
   .gal figure{aspect-ratio:auto!important}
-  .gal .a{grid-column:1/4;grid-row:span 2}.gal .b{grid-column:4/5;grid-row:span 2}.gal .c{grid-column:5/7;grid-row:span 3}.gal .e{order:0}
-  .gal .d{grid-column:1/3;grid-row:span 2}.gal .e{grid-column:3/5;grid-row:span 2}.gal .f{grid-column:5/7;grid-row:span 1}
+  .gal .e{order:0}
+  .gal .a{grid-column:1/4;grid-row:span 2}.gal .b{grid-column:4/5;grid-row:span 2}.gal .c{grid-column:5/7;grid-row:span 3;border-radius:150px 12px 150px 12px}
+  .gal .d{grid-column:1/3;grid-row:span 2}.gal .e{grid-column:3/5;grid-row:span 2}.gal .f{grid-column:5/7;grid-row:span 1;border-radius:10px 40px 10px 40px}
 }
 
 /* reseñas + horario */
-.rev{background:#dbe7e4}
-.rev .cols{display:grid;gap:40px;margin-top:28px}
-.rev blockquote{font-family:var(--display);font-size:clamp(1.6rem,5vw,2.4rem);font-weight:500;line-height:1.12;letter-spacing:-.015em}
+.rev .cols{display:grid;gap:44px;margin-top:28px}
+.rev blockquote{font-family:var(--serif);font-size:clamp(1.7rem,5.2vw,2.5rem);line-height:1.14}
 .stars{display:flex;gap:3px;margin-bottom:14px}
-.stars svg{width:20px;height:20px;fill:var(--coral)}
-.rev cite{display:block;margin-top:12px;font-style:normal;font-weight:600;color:var(--muted)}
-.hours h3{font-size:1.5rem;font-weight:800;margin-bottom:6px}
-.hours table{border-collapse:collapse;width:100%;max-width:460px}
-.hours th,.hours td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);font-weight:400}
+.stars svg{width:20px;height:20px;fill:var(--gold-d)}
+.rev cite{display:block;margin-top:14px;font-style:normal;font-weight:600;color:var(--muted)}
+.hours h3{font-size:1.6rem;margin-bottom:6px}
+.hours table{border-collapse:separate;border-spacing:0;width:100%;max-width:470px}
+.hours th,.hours td{text-align:left;padding:10px 10px;border-bottom:1px solid rgba(34,34,32,.2);font-weight:400}
 .hours th{font-weight:600}
-.hours tr.today{background:var(--marine);color:#fff}
-.hours tr.today th,.hours tr.today td{font-weight:600}
+.hours tr.today{background:var(--coal);color:var(--linen)}
+.hours tr.today th,.hours tr.today td{font-weight:600;border-color:var(--coal)}
+.hours tr.today th{border-radius:18px 0 0 4px}
+.hours tr.today td{border-radius:0 4px 18px 0}
 .hours small{display:block;margin-top:10px;color:var(--muted)}
-@media(min-width:860px){.rev .cols{grid-template-columns:1.3fr 1fr;gap:72px}}
+@media(min-width:860px){.rev .cols{grid-template-columns:1.3fr 1fr;gap:80px}}
 
 /* contacto */
 .contact .cols{display:grid;gap:32px;margin-top:28px}
 .contact address{font-style:normal;font-size:1.2rem}
-.contact .tel{display:inline-block;font-family:var(--display);font-weight:800;font-size:2rem;letter-spacing:-.02em;text-decoration:none;margin:10px 0;min-height:44px}
+.contact .tel{display:inline-block;font-family:var(--serif);font-size:2.2rem;text-decoration:none;margin:10px 0;min-height:44px}
 .contact .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-.map{width:100%;height:340px;border:0;background:#c9d8d4}
-@media(min-width:860px){.contact .cols{grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}.map{height:420px}}
+.map{width:100%;height:340px;border:0;background:var(--stone);border-radius:90px 10px 90px 10px;filter:sepia(.25) saturate(.85)}
+@media(min-width:860px){.contact .cols{grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}.map{height:440px}}
 
-footer{background:var(--marine);color:#cfdce3;padding:32px 0;font-size:.92rem}
-footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer{position:relative;background:var(--grain-l),var(--coal);color:#d9d3c4;padding:56px 0 32px;font-size:.92rem}
+footer .wave{fill:var(--coal)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center}
+footer .olive{margin:0}
 footer a{display:inline-flex;align-items:center;min-height:44px}
 
 /* barra móvil */
-.fixbar{position:fixed;inset:auto 0 0 0;z-index:60;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:8px var(--gut);background:var(--marine);box-shadow:0 -1px 0 rgba(255,255,255,.15)}
-.fixbar .btn{min-height:48px}
+.fixbar{position:fixed;inset:auto 0 0 0;z-index:60;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:8px var(--gut);background:var(--coal);box-shadow:0 -1px 0 rgba(243,238,227,.18)}
 @media(min-width:860px){
   .fixbar{display:none}body{padding-bottom:0}
   .menu-btn{display:none}
-  .nav-right{order:3}nav.main{order:2;position:static;opacity:1;transform:none;pointer-events:auto;visibility:visible;background:none;padding:0;display:flex;gap:4px}
+  .nav-right{order:3}
+  nav.main{order:2;position:static;opacity:1;transform:none;pointer-events:auto;visibility:visible;background:none;padding:0;display:flex;gap:4px}
   nav.main a{border:0;padding:0 12px}
-  .top .btn-coral.cta{display:inline-flex}
+  .top .btn.cta{display:inline-flex}
   .bar{height:72px}
-  .hero .wrap{padding-bottom:64px}
-  .seal{top:100px;width:150px;height:150px;font-size:.82rem}.seal b{font-size:1.15rem}
-  section{padding:96px 0}
+  .hero{padding-bottom:64px}
+  .seal{top:100px;width:150px;height:150px;font-size:.82rem}.seal b{font-size:1.2rem}
+  section{padding:104px 0}
 }
-@media(max-width:380px){.logo{font-size:1.4rem}.lang button{min-width:40px}}
+@media(max-width:380px){.logo .wm{font-size:1.6rem}.lang button{min-width:40px}}
 
-/* movimiento: solo transform y opacity */
-.hero .rise{opacity:0;transform:translateY(14px);animation:rise .5s var(--ease-out) forwards}
-.hero .rise:nth-child(2){animation-delay:60ms}.hero .rise:nth-child(3){animation-delay:120ms}.hero .rise:nth-child(4){animation-delay:180ms}.hero .rise:nth-child(5){animation-delay:240ms}
+/* movimiento: solo transform y opacidad */
+.hero .rise{opacity:0;transform:translateY(14px);animation:rise .55s var(--ease-out) forwards}
+.hero .rise:nth-child(2){animation-delay:70ms}.hero .rise:nth-child(3){animation-delay:140ms}.hero .rise:nth-child(4){animation-delay:210ms}.hero .rise:nth-child(5){animation-delay:280ms}.hero .rise:nth-child(6){animation-delay:350ms}
 @keyframes rise{to{opacity:1;transform:none}}
-.js .rv{opacity:0;transform:translateY(10px);transition:opacity .24s var(--ease-out),transform .24s var(--ease-out);transition-delay:calc(var(--i,0)*45ms)}
+.js .rv{opacity:0;transform:translateY(10px);transition:opacity .26s var(--ease-out),transform .26s var(--ease-out);transition-delay:calc(var(--i,0)*50ms)}
 .js .rv.in{opacity:1;transform:none}
 @media (hover:hover) and (pointer:fine){
   .gal figure img{transition:transform .3s var(--ease-out)}
-  .gal figure:hover img{transform:scale(1.03)}
+  .gal figure:hover img{transform:scale(1.04)}
 }
 @media(prefers-reduced-motion:reduce){
   .hero .rise{animation:fadein .2s ease forwards;transform:none}
@@ -185,13 +208,22 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
 </head>
 <body>
 <a class="skip" href="#carta" data-va="Vés al contingut">Ir al contenido</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="st" viewBox="0 0 20 20"><path d="M10 1.5l2.5 5.6 6 .6-4.5 4 1.3 6L10 14.6 4.7 17.7l1.3-6-4.5-4 6-.6z"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="st" viewBox="0 0 20 20"><path d="M10 1.5l2.5 5.6 6 .6-4.5 4 1.3 6L10 14.6 4.7 17.7l1.3-6-4.5-4 6-.6z"/></symbol>
+  <symbol id="ol" viewBox="0 0 120 26"><path d="M2 20C34 20 76 14 116 5"/><path d="M26 18c-6-7-5-12 0-15 4 5 4 11 0 15z"/><path d="M26 18c2 4 8 7 13 5-1-5-7-7-13-5z"/><path d="M52 16c-6-7-5-12 0-15 4 5 4 11 0 15z"/><path d="M52 16c3 4 8 6 13 4-1-5-7-6-13-4z"/><path d="M80 12c-5-7-4-11 1-14 4 5 3 10-1 14z"/><path d="M80 12c3 4 8 5 12 3-1-5-6-6-12-3z"/><path d="M104 8c-4-5-3-8 1-10 3 4 2 7-1 10z"/></symbol>
+  <symbol id="crown" viewBox="0 0 192 48">
+    <path d="M0 46V29C24 17 52 7 79 2 63 9 56 14 54 19 40 27 20 38 0 46Z"/>
+    <path d="M192 46V29C168 17 140 7 113 2 129 9 136 14 138 19 152 27 172 38 192 46Z"/>
+    <path d="M55 35Q96 30 137 35V40Q96 36 55 40Z"/>
+    <circle fill="#fff" cx="72" cy="19" r="8.5"/><circle fill="#fff" cx="96" cy="17" r="11"/><circle fill="#fff" cx="120" cy="19" r="8.5"/>
+  </symbol>
+</svg>
 
 <header class="top">
   <div class="wrap bar">
-    <a class="logo" href="#inicio" aria-label="Nestan Bar &amp; Restaurante, inicio">nestan<i></i></a>
+    <a class="logo" href="#inicio" aria-label="Nestan Bar &amp; Restaurante, inicio"><span class="wm" aria-hidden="true">Nesta<span class="mir">N</span></span></a>
     <div class="nav-right">
-      <a class="btn btn-coral cta" id="cta-top" href="#" data-va="Reserva mesa">Reserva mesa</a>
+      <a class="btn btn-gold cta" id="cta-top" href="#" data-va="Reserva mesa">Reserva mesa</a>
       <div class="lang" role="group" aria-label="Idioma / Idioma">
         <button type="button" data-lang="es" aria-pressed="true">ES</button>
         <button type="button" data-lang="va" aria-pressed="false">VA</button>
@@ -209,29 +241,36 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
 </header>
 
 <main id="inicio">
-<section class="hero" style="padding:0">
+<section class="hero" style="padding-top:0;padding-bottom:0">
   <img class="bg" src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=1600&h=1000&fit=crop" width="1600" height="1000" alt="Paella de marisco en sartén sobre mesa oscura" data-va-alt="Paella de marisc en paella sobre taula fosca" onerror="this.style.visibility='hidden'">
   <div class="seal">
     <svg viewBox="0 0 100 20" fill="currentColor" aria-hidden="true"><use href="#st" x="0" width="20" height="20"/><use href="#st" x="20" width="20" height="20"/><use href="#st" x="40" width="20" height="20"/><use href="#st" x="60" width="20" height="20"/><use href="#st" x="80" width="20" height="20"/></svg>
     <b class="edit" data-va="Molt ben valorat">Muy bien valorado</b>
     <span class="edit" data-va="+160 opinions a Google">+160 opiniones en Google</span>
   </div>
-  <div class="wrap">
+  <div class="wrap" style="padding-bottom:40px">
     <div class="status rise" id="status" role="status"><span class="dot"></span><span id="status-txt">Horario orientativo</span></div>
-    <h1 class="name rise">Nestan<span class="sr"> Bar &amp; Restaurante</span></h1>
-    <p class="sub rise">Bar &amp; Restaurante · Cullera</p>
+    <h1 class="lockup rise">
+      <span class="sr">Nestan Bar &amp; Restaurante</span>
+      <svg class="crown" viewBox="0 0 192 48" aria-hidden="true"><use href="#crown"/></svg>
+      <span class="wm" aria-hidden="true">Nesta<span class="mir">N</span></span>
+      <span class="rest" aria-hidden="true"><span>R</span><span>E</span><span>S</span><span>T</span><span>A</span><span>U</span><span>R</span><span>A</span><span>N</span><span>T</span><span>E</span></span>
+    </h1>
+    <p class="sub rise" data-va="Bar i restaurant a Cullera">Bar y restaurante en Cullera</p>
     <p class="tag rise" data-va="Menja bé a Cullera, de les tapes al peix.">Come bien en Cullera, de las tapas al pescado.</p>
     <p class="lead rise" data-va="Tapes, marisc, carn i entrepans. Des de les 9 del matí, a la Travessia Mestre Serrano.">Tapas, marisco, carne y bocadillos. Desde las 9 de la mañana, en la Travessia Mestre Serrano.</p>
     <div class="acts rise">
-      <a class="btn btn-coral" id="cta-hero" href="#" data-va="Reserva mesa">Reserva mesa</a>
+      <a class="btn btn-gold" id="cta-hero" href="#" data-va="Reserva mesa">Reserva mesa</a>
       <a class="btn btn-line" href="tel:+34631203169" data-va="Telefona'ns">Llámanos</a>
     </div>
   </div>
 </section>
 
-<section class="why" id="por-que">
+<section class="why cream" id="por-que">
+  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40V22C180 2 360 2 540 18S900 40 1100 22 1340 0 1440 14V40Z"/></svg>
   <div class="wrap">
     <h2 data-va="Per què seure a Nestan">Por qué sentarse en Nestan</h2>
+    <svg class="olive" viewBox="0 0 120 26" aria-hidden="true"><use href="#ol"/></svg>
     <div class="grid">
       <div class="big">
         <blockquote lang="es">«Tanto la comida como el servicio fueron de 10.»</blockquote>
@@ -250,9 +289,11 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
   </div>
 </section>
 
-<section class="carta" id="carta">
+<section class="carta dark" id="carta">
+  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40V14C200 30 420 36 640 20S1080 0 1260 16 1400 30 1440 22V40Z"/></svg>
   <div class="wrap">
     <h2 data-va="La carta">La carta</h2>
+    <svg class="olive" viewBox="0 0 120 26" aria-hidden="true"><use href="#ol"/></svg>
     <p class="intro" data-va="Plats que la gent demana i recomana en les ressenyes. Pregunta pels preus i pel plat del dia.">Platos que la gente pide y recomienda en las reseñas. Pregunta por los precios y por el plato del día.</p>
     <ul>
       <li class="rv"><h3 data-va="Gambes a l'all">Gambas al ajillo</h3><span class="pr" data-va="Consulta al local">Consultar en local</span><p data-va="Saltades amb all, per a compartir.">Salteadas con ajo, para compartir.</p></li>
@@ -265,13 +306,15 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       <li class="rv"><h3 data-va="Entrepans">Bocadillos</h3><span class="pr" data-va="Consulta al local">Consultar en local</span><p class="edit" data-va="Per a l'esmorzar o el dinar.">Para el desayuno o la comida.</p></li>
     </ul>
     <p class="note" data-va="Carta orientativa. Confirma plats i preus per telèfon.">Carta orientativa. Confirma platos y precios por teléfono.</p>
-    <a class="btn btn-coral" id="cta-carta" href="#" data-va="Reserva mesa">Reserva mesa</a>
+    <a class="btn btn-gold" id="cta-carta" href="#" data-va="Reserva mesa">Reserva mesa</a>
   </div>
 </section>
 
-<section class="gal" id="galeria">
+<section class="gal cream" id="galeria">
+  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40V20C240 0 480 6 720 22S1200 40 1440 12V40Z"/></svg>
   <div class="wrap">
     <h2 data-va="Taula, plats i ambient">Mesa, platos y ambiente</h2>
+    <svg class="olive" viewBox="0 0 120 26" aria-hidden="true"><use href="#ol"/></svg>
     <div class="g">
       <figure class="a rv"><img loading="lazy" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&h=675&fit=crop" width="900" height="675" alt="Comedor amplio con mesas de madera y lámparas colgantes" data-va-alt="Menjador ampli amb taules de fusta i làmpades penjades" onerror="this.style.visibility='hidden'"></figure>
       <figure class="b rv"><img loading="lazy" src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=600&h=600&fit=crop" width="600" height="600" alt="Marisco con limón en una cazuela" data-va-alt="Marisc amb llima en una cassola" onerror="this.style.visibility='hidden'"></figure>
@@ -284,9 +327,11 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
   </div>
 </section>
 
-<section class="rev" id="horario">
+<section class="rev stone" id="horario">
+  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40V10C160 30 360 36 600 20S1060 0 1240 14 1400 28 1440 18V40Z"/></svg>
   <div class="wrap">
     <h2 data-va="Què diuen i quan obrim">Qué dicen y cuándo abrimos</h2>
+    <svg class="olive" viewBox="0 0 120 26" aria-hidden="true"><use href="#ol"/></svg>
     <div class="cols">
       <figure>
         <div class="stars" role="img" aria-label="5 estrellas" data-va-aria="5 estreles"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></div>
@@ -313,17 +358,19 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
   </div>
 </section>
 
-<section class="contact" id="contacto">
+<section class="contact cream" id="contacto">
+  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40V24C220 4 440 2 700 18S1160 38 1440 8V40Z"/></svg>
   <div class="wrap">
     <h2 data-va="Vine a Nestan">Ven a Nestan</h2>
+    <svg class="olive" viewBox="0 0 120 26" aria-hidden="true"><use href="#ol"/></svg>
     <div class="cols">
       <div>
         <address>Travessia Mestre Serrano, 2<br>Cullera, València</address>
         <a class="tel" href="tel:+34631203169">631 20 31 69</a>
         <p data-va="Reserva per telèfon o per WhatsApp, com et vinga millor.">Reserva por teléfono o por WhatsApp, como te venga mejor.</p>
         <div class="acts">
-          <a class="btn btn-coral" id="cta-wa" href="#" data-va="Escriu-nos per WhatsApp">Escríbenos por WhatsApp</a>
-          <a class="btn btn-dark" href="tel:+34631203169" data-va="Telefona'ns">Llámanos</a>
+          <a class="btn btn-coal" id="cta-wa" href="#" data-va="Escriu-nos per WhatsApp">Escríbenos por WhatsApp</a>
+          <a class="btn btn-line" style="color:var(--coal);border-color:var(--coal)" href="tel:+34631203169" data-va="Telefona'ns">Llámanos</a>
         </div>
       </div>
       <iframe class="map" title="Mapa de Nestan Bar & Restaurante en Cullera" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Travessia+Mestre+Serrano+2+Cullera&amp;output=embed"></iframe>
@@ -333,15 +380,17 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
 </main>
 
 <footer>
+  <svg class="wave" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40V16C200 34 420 38 660 22S1100 0 1440 20V40Z"/></svg>
   <div class="wrap">
     <span>© Nestan Bar &amp; Restaurante · Cullera</span>
+    <svg class="olive" viewBox="0 0 120 26" aria-hidden="true"><use href="#ol"/></svg>
     <a href="https://porfolio-pepe.vercel.app" data-va="Maqueta de disseny de Pepe Llopis">Maqueta de diseño de Pepe Llopis</a>
   </div>
 </footer>
 
 <div class="fixbar">
   <a class="btn btn-line" href="tel:+34631203169" data-va="Telefona">Llamar</a>
-  <a class="btn btn-coral" id="cta-bar" href="#" data-va="Reserva mesa">Reserva mesa</a>
+  <a class="btn btn-gold" id="cta-bar" href="#" data-va="Reserva mesa">Reserva mesa</a>
 </div>
 
 <script>
@@ -349,14 +398,13 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
   var d=document,root=d.documentElement;
   root.classList.add('js');
   var PHONE='34631203169';
-  var T={es:{msg:'Hola, quiero reservar mesa en Nestan.',open:'Abierto ahora · hasta las ',openAt:'Cerrado · abrimos a las ',tomorrow:'Cerrado hoy · abrimos mañana a las ',closed:'Cerrado hoy · abrimos el jueves a las ',later:'Cerrado · abrimos a las ',menu:'Menú',close:'Cerrar'},
-         va:{msg:'Hola, vull reservar taula a Nestan.',open:'Obert ara · fins a les ',openAt:'Tancat · obrim a les ',tomorrow:'Tancat hui · obrim demà a les ',closed:'Tancat hui · obrim dijous a les ',later:'Tancat · obrim a les ',menu:'Menú',close:'Tanca'}};
+  var T={es:{msg:'Hola, quiero reservar mesa en Nestan.',open:'Abierto ahora · hasta las ',tomorrow:'Cerrado hoy · abrimos mañana a las ',closed:'Cerrado hoy · abrimos el jueves a las ',later:'Cerrado · abrimos a las ',menu:'Menú'},
+         va:{msg:'Hola, vull reservar taula a Nestan.',open:'Obert ara · fins a les ',tomorrow:'Tancat hui · obrim demà a les ',closed:'Tancat hui · obrim dijous a les ',later:'Tancat · obrim a les ',menu:'Menú'}};
   var lang='es';
   try{var s=localStorage.getItem('nestan-lang');if(s==='va'||s==='es')lang=s;}catch(e){}
 
-  // horario [[ini,fin],...] en minutos; domingo cierra a las 25:00 (01:00)
   var H={0:[[540,960],[1170,1500]],1:[[540,960],[1170,1440]],2:[[540,960],[1170,1440]],3:[],4:[[540,960],[1170,1440]],5:[[540,960],[1170,1440]],6:[[540,960],[1170,1440]]};
-  function fmt(m){m=m%1440;var h=Math.floor(m/60),mm=m%60;return h+':'+(mm<10?'0':'')+mm;}
+  function fmt(m){if(m%1440===0)return '00:00';m=m%1440;var h=Math.floor(m/60),mm=m%60;return h+':'+(mm<10?'0':'')+mm;}
   function madrid(){
     var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()),o={};
     p.forEach(function(x){o[x.type]=x.value;});
